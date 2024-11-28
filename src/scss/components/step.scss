@@ -1,0 +1,252 @@
+.step {
+	margin-top: 160px;
+	@include media-mx(991) {
+		margin-top: 60px;
+	}
+	&__container {
+		padding: 0 126px;
+
+		@include media-mx(991) {
+			padding: 0 16px;
+		}
+	}
+	h2 {
+		font-weight: 700;
+		font-size: 48px;
+		text-align: center;
+
+		margin-bottom: 80px;
+
+		@include media-mn(1900) {
+			font-size: 52px;
+		}
+
+		@include media-mx(991) {
+			font-size: 24px;
+			text-align: left;
+
+			margin-bottom: 32px;
+		}
+		span {
+			width: fit-content;
+
+			border-radius: 16px;
+			padding: 8px 24px;
+
+			color: var(--white);
+			background-color: var(--primary-01);
+
+			@include media-mx(991) {
+				padding: 0;
+
+				background-color: initial;
+				color: var(--primary-01);
+			}
+		}
+	}
+	.step-slider {
+		.swiper-wrapper {
+			padding-bottom: 40px;
+
+			@include media-mx(991) {
+				padding-bottom: 32px;
+			}
+		}
+		.item {
+			height: 100%;
+
+			padding: 32px;
+			border-radius: 32px;
+
+			background-color: var(--grayscale-07);
+
+			@include media-mx(991) {
+				padding: 16px;
+
+				border-radius: 16px;
+			}
+			.item-head {
+				margin-bottom: auto;
+
+				span {
+					width: 64px;
+					height: 64px;
+
+					font-weight: 700;
+					font-size: 28px;
+
+					border-radius: 50%;
+
+					background-color: var(--primary-01);
+					color: var(--white);
+
+					@include media-mn(1900) {
+						font-size: 32px;
+					}
+					@include media-mx(991) {
+						width: 40px;
+						height: 40px;
+
+						font-size: 18px;
+					}
+				}
+
+				.img-box {
+					width: 194px;
+					height: 194px;
+
+					@include media-mx(991) {
+						width: 110px;
+						height: 110px;
+					}
+				}
+			}
+			h3 {
+				font-weight: 700;
+				font-size: 28px;
+
+				@include media-mn(1900) {
+					font-size: 32px;
+				}
+				@include media-mx(991) {
+					font-size: 18px;
+					line-height: 140%;
+				}
+			}
+			.line {
+				width: 100%;
+				height: 1px;
+
+				margin: 24px 0;
+
+				border-radius: 1px;
+
+				background-color: var(--primary-01);
+
+				@include media-mx(991) {
+					margin: 12px 0;
+				}
+			}
+			.btn {
+				width: fit-content;
+
+				font-weight: 500;
+				font-size: 16px;
+
+				border-radius: 32px;
+				padding: 16px 60px;
+
+				box-shadow:
+					0 0 1px 0 rgba(19, 23, 35, 0.04),
+					0 0 2px 0 rgba(19, 23, 35, 0.06),
+					0 3px 6px 0 rgba(19, 23, 35, 0.04);
+				background: var(--white);
+				color: var(--grayscale-03);
+
+				transition: all var(--bs-transition);
+
+				@include media-mn(1900) {
+					font-size: 20px;
+				}
+				@include media-mx(991) {
+					font-size: 14px;
+
+					padding: 7px 32px;
+				}
+
+				&:hover {
+					background-color: var(--grayscale-01);
+					color: var(--white);
+				}
+			}
+		}
+		.step-navigation {
+			position: relative;
+
+			width: 104px;
+			height: 48px;
+
+			border-radius: 40px;
+
+			background: var(--grayscale-07);
+			.step-next,
+			.step-prev {
+				width: 40px;
+				height: 40px;
+
+				top: 4px;
+
+				margin-top: 0;
+				border-radius: 50%;
+
+				background-color: var(--grayscale-01);
+				color: var(--white);
+
+				transition: all 0.3s ease-in-out;
+				&:hover {
+					background-color: var(--primary-01);
+					color: var(--white);
+				}
+			}
+			.step-next::after,
+			.step-prev::after {
+				font-size: 20px;
+			}
+			.step-next {
+				right: 4px;
+			}
+			.step-prev {
+				left: 4px;
+			}
+			.swiper-button-disabled {
+				opacity: 1;
+
+				color: var(--grayscale-05);
+				background-color: var(--white);
+			}
+		}
+		.step-pagination {
+			--swiper-pagination-bottom: 0;
+
+			.swiper-pagination-bullet {
+				opacity: 1;
+
+				width: 4%;
+				height: 2px;
+
+				background: var(--grayscale-08);
+
+				border-radius: 2px;
+			}
+
+			.swiper-pagination-bullet-active {
+				background: var(--grayscale-01);
+			}
+		}
+
+		.swiper-slide:nth-child(3n + 3) .item {
+			background-color: var(--primary-01);
+			.item-head {
+				span {
+					background-color: var(--white);
+					color: var(--grayscale-01);
+				}
+			}
+			h3 {
+				color: var(--white);
+			}
+			.line {
+				background-color: var(--white);
+			}
+			.btn {
+				background-color: var(--grayscale-01);
+				color: var(--white);
+
+				&:hover {
+					background-color: var(--white);
+					color: var(--grayscale-01);
+				}
+			}
+		}
+	}
+}

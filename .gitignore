@@ -1,0 +1,14 @@
+.vscode
+.idea
+.temporary_cache
+
+dist
+node_modules
+package-lock.json
+gulp/version.json
+
+# macOS
+.DS_Store
+# Logs
+*.log
+logs/
