@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('html/head.html', {
-    'title': 'Главная'
-  })
-  <body>
-    <div class="wrapper">
-      @@include('html/header.html')
+@@include('html/head.html', {
+'title': 'Главная'
+})
 
-      <main class="page">
-        <div data-observ></div>
-		@@include('html/hero.html')
-		@@include('html/step.html')
-		@@include('html/free.html')
-      </main>
+<body>
+	<noscript>
+		<div><img src="https://mc.yandex.ru/watch/99169748" style="position:absolute; left:-9999px;" alt="" /></div>
+	</noscript>
+	<noscript>
+		<div><img src="https://top-fwz1.mail.ru/counter?id=3588649;js=na" style="position:absolute;left:-9999px;"
+				alt="Top.Mail.Ru" /></div>
+	</noscript>
+	<div class="wrapper">
+		@@include('html/header.html')
 
-      @@include('html/footer.html')
-    </div>
-  </body>
+		<main class="page">
+			<div data-observ></div>
+			@@include('html/hero.html')
+			@@include('html/step.html')
+			@@include('html/free.html')
+		</main>
+
+		@@include('html/footer.html')
+		@@include('html/feedback-2.html')
+	</div>
+	@@include('html/script.html')
+</body>
+
 </html>

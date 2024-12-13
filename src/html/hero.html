@@ -4,9 +4,9 @@
 			<div class="col-12 col-lg-6">
 				<h1>Успешно сдай ЕГЭ/ОГЭ 2025</h1>
 				<h2>Бесплатно отработай сложные задания,чтобы <span>поступить куда хочется</span></h2>
-				<a class="btn" href="#">
+				<button class="btn" href="#" data-bs-toggle="modal" data-bs-target="#feedbackModal">
 					<p>Начать бесплатно</p>
-				</a>
+				</button>
 			</div>
 			<div class="d-none d-lg-flex col-lg-6">
 				<div class="feedback-form mx-auto ms-xxl-auto">
@@ -17,8 +17,8 @@
 					</div>
 
 
-					<form id="ltForm8446641" class="lt-normal-form lt-form-inner lt-form"
-						action="http://geniumlab.getcourse.ru/pl/lite/block-public/process-html?id=2115075810"
+					<form id="ltForm1300324" class="lt-normal-form lt-form-inner lt-form"
+						action="https://geniumlab.online/pl/lite/block-public/process-html?id=2115075810"
 						method="post" data-open-new-window="0">
 
 						<input type="hidden" name="formParams[setted_offer_id]">
@@ -32,7 +32,8 @@
 						<div class="input-group">
 							<span class="error-message"></span>
 							<input class="form-control" type="tel" maxlength="60" placeholder="Телефон"
-								name="formParams[phone]" required>
+								name="formParams[phone]" data-phone-default-country="auto"
+								data-phone-preferred-countries="ru,by,kz" required>
 						</div>
 
 						<div class="input-group">
@@ -48,21 +49,34 @@
 									на <a href="#">обработку персональных данных</a></span></label>
 						</div>
 
-						<button class="btn" type="submit" id="button2481200" style="color: white; background-color: ;">
+						<button class="btn" type="submit" id="button338874"  style="color: white; background-color: ; "
+							onclick="if(window['btnprs675bf4083654b']){return false;}window['btnprs675bf4083654b']=true;setTimeout(function(){window['btnprs675bf4083654b']=false},6000);return true;">
 							<p>Записаться</p>
 						</button>
-
 
 
 						<!-- Hidden fields for GetCourse tracking -->
 						<input type="hidden" id="13039606731b2cd2583b" name="__gc__internal__form__helper" value="">
 						<input type="hidden" id="13039606731b2cd2583bref" name="__gc__internal__form__helper_ref"
 							value="">
-						<input type="hidden" name="requestTime" value="1731310285">
-						<input type="hidden" name="requestSimpleSign" value="55f2db732cd0e9773da5709f43418d0e">
+						<input type="hidden" name="requestTime" value="1734079496">
+						<input type="hidden" name="requestSimpleSign" value="21fdbdf86703d78b08d121099f6baa32">
 						<input type="hidden" name="isHtmlWidget" value="1">
 					</form>
 					<span id="gccounterImgContainer"></span>
+					<script>
+						window.addEventListener('load', function () {
+							let loc = document.getElementById("1303960675bf407efc72");
+							loc.value = window.location.href;
+							let ref = document.getElementById("1303960675bf407efc72ref");
+							ref.value = document.referrer;
+
+							let statUrl = "https://geniumlab.online/stat/counter?ref=" + encodeURIComponent(document.referrer)
+								+ "&loc=" + encodeURIComponent(document.location.href);
+							document.getElementById('gccounterImgContainer').innerHTML
+								= "<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";
+						});
+					</script>
 				</div>
 			</div>
 		</div>

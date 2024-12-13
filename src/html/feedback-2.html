@@ -1,0 +1,59 @@
+<div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="feedback-form-2">
+				<div class="row">
+					<div class="col-12">
+						<h2>Откройте новые возможности с GeniumLab</h2>
+					</div>
+					<div class="col-12">
+						<p>Наши менеджеры помогут выбрать направление, расскажут о форматах и программах обучения</p>
+					</div>
+				</div>
+				<form action="https://geniumlab.online/pl/lite/block-public/process-html?id=2121178472"
+					method="post" id="ltForm5227716" class="lt-normal-form lt-form-inner lt-form">
+					<div class="row">
+						<input type="text" class="form-control" id="name" name="formParams[full_name]" value=""
+							placeholder="Имя" required>
+						<input type="tel" class="form-control" id="phone" name="formParams[phone]" placeholder="Телефон"
+							required>
+						<input type="email" class="form-control" id="email" name="formParams[email]"
+							placeholder="E-mail" required>
+						<input type="hidden" name="formParams[setted_offer_id]">
+						<div class="checkbox-group d-flex align-items-center">
+							<input type="checkbox" id="accept-terms" name="accept-terms" required>
+							<label for="accept-terms">
+								<span>Принимаю условия <a href="#">оферты</a> и согласен на
+									<a href="#">обработку персональных данных</a></span>
+							</label>
+						</div>
+						<button class="btn" type="submit" id="button4042254"
+							onclick="if(window['btnprs675bf5e510f46']){return false;}window['btnprs675bf5e510f46']=true;setTimeout(function(){window['btnprs675bf5e510f46']=false},6000);return true;">
+							<p>Оставить заявку</p>
+						</button>
+						<input type="hidden" id="1320177675bf5e50adc5" name="__gc__internal__form__helper"
+							class="__gc__internal__form__helper" value="">
+						<input type="hidden" id="1320177675bf5e50adc5ref" name="__gc__internal__form__helper_ref"
+							class="__gc__internal__form__helper_ref" value="">
+						<input type="hidden" name="requestTime" value="1734079973">
+						<input type="hidden" name="requestSimpleSign" value="8a6b74ee224ea366cbc61b7d59477fab">
+						<input type="hidden" name="isHtmlWidget" value="1" />
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	window.addEventListener('load', function(){
+		let loc = document.getElementById("1320177675bf5e50adc5");
+		loc.value = window.location.href;
+		let ref = document.getElementById("1320177675bf5e50adc5ref");
+		ref.value = document.referrer;
+
+		let statUrl = "https://geniumlab.online/stat/counter?ref=" + encodeURIComponent(document.referrer)
+			+ "&loc=" + encodeURIComponent(document.location.href);
+		document.getElementById('gccounterImgContainer').innerHTML
+			= "<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";
+	});
+</script>

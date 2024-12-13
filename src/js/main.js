@@ -64,6 +64,7 @@ new BurgerMenu ().init ();
 // 	defaultOpen: [], // [0,1]
 // 	collapsedClass: 'open',
 // });
+document.addEventListener("DOMContentLoaded", function () {
 
 const stepSlider = new Swiper ('.step-slider', {
   slidesPerView: 1,
@@ -90,7 +91,7 @@ const stepSlider = new Swiper ('.step-slider', {
 });
 
 function countdown() {
-    const targetDate = new Date('2025-06-01T00:00:00'); // Дата ЕГЭ
+    const targetDate = new Date('2025-05-23T00:00:00'); // Дата ЕГЭ
 
     function getDayLabel(days) {
         if (days % 10 === 1 && days % 100 !== 11) {
@@ -136,5 +137,15 @@ function countdown() {
 countdown();
 
 
+    const phoneInputs = document.querySelectorAll('input[name="formParams[phone]"]');
+
+    if (phoneInputs.length > 0) {
+        const im = new Inputmask("+7 (999) 999-99-99");
+
+        phoneInputs.forEach((input) => {
+            im.mask(input);
+        });
+    }
+});
 
 

@@ -79,6 +79,7 @@
 	},
 	"dependencies": {
 		"aos": "^2.3.4",
+		"inputmask": "^5.0.9",
 		"swiper": "^11.1.14"
 	}
 }
