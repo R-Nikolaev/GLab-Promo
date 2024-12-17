@@ -108,13 +108,9 @@
 
 		border-radius: 40px;
 		@include media-mn(1900) {
-			font-size: 20px;
-
 			padding: 28px 72px 28px 40px;
 		}
 		@include media-mx(991) {
-			font-size: 16px;
-
 			padding: 16px 34px 16px 24px;
 		}
 		p {
@@ -129,6 +125,10 @@
 
 			margin: 0 !important;
 			padding: 0 !important;
+
+			@include media-mx(991) {
+			  font-size: 16px;
+			}
 
 			&::before {
 				position: absolute;
@@ -179,7 +179,7 @@
 
 		backdrop-filter: blur(16px);
 		background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(208, 208, 208, 0.6) 100%);
-		.row{
+		.row {
 			position: relative;
 
 			backdrop-filter: none;
@@ -187,7 +187,7 @@
 		h2 {
 			font-weight: 700;
 			font-size: 20px;
-			line-height: 120%!important;
+			line-height: 120% !important;
 
 			margin-bottom: 24px;
 
@@ -248,51 +248,49 @@
 				}
 			}
 			.checkbox-group {
-				position: relative;
-				backdrop-filter: none;
-
 				display: flex;
 				align-items: center;
 
 				margin-bottom: 32px;
 
-				input {
-					position: absolute;
-					z-index: -1;
-					opacity: 0;
+				input[type="checkbox"] {
+					display: none;
 				}
-				input + label {
-					display: inline-flex;
+				label{
+					display: flex;
 					align-items: center;
-					user-select: none;
-				}
-				input + label::before {
-					content: "";
 					cursor: pointer;
-					display: inline-block;
-					width: 24px;
-					height: 24px;
-					flex-shrink: 0;
-					flex-grow: 0;
-					border: 1px solid #adb5bd;
-					border-radius: 0.25em;
-					margin-right: 0.5em;
-					background-repeat: no-repeat;
-					background-position: center center;
-					background-size: 50% 50%;
+					&::before {
+						content: "";
+						cursor: pointer;
+						display: inline-block;
+						width: 24px;
+						height: 24px;
+						flex-shrink: 0;
+						flex-grow: 0;
+						border: 1px solid #BEC3D3;
+						border-radius: 0.25em;
+						margin-right: 0.5em;
+						background-repeat: no-repeat;
+						background-position: center center;
+						background-size: 50% 50%;
 
-					@include media-mx(991) {
-						width: 16px;
-						height: 16px;
+						@include media-mx(991) {
+							width: 16px;
+							height: 16px;
+						}
 					}
 				}
-				input:checked + label::before {
+				input[type="checkbox"]:checked + label::before {
+					position: relative;
+
 					border-color: var(--grayscale-01);
 					background-color: var(--grayscale-01);
 					background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V5Z' fill='%231F222E'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18.0304 9.03033L11.0304 16.0303C10.7375 16.3232 10.2626 16.3232 9.96973 16.0303L5.96973 12.0303L7.03039 10.9697L10.5001 14.4393L16.9697 7.96967L18.0304 9.03033Z' fill='white'/%3E%3C/svg%3E%0A");
 					background-size: cover;
 				}
-				label {
+
+				label span{
 					font-family: var(--font-family);
 					font-weight: 500;
 					font-size: 14px;
@@ -329,13 +327,9 @@
 
 				border-radius: 40px;
 				@include media-mn(1900) {
-					font-size: 20px;
-
 					padding: 28px 72px 28px 40px;
 				}
 				@include media-mx(991) {
-					font-size: 16px;
-
 					padding: 16px 34px 16px 24px;
 				}
 				p {
@@ -351,6 +345,10 @@
 
 					margin: 0 !important;
 					padding: 0 !important;
+
+					@include media-mx(991) {
+					  font-size: 16px;
+					}
 
 					&::before,
 					&::after {
