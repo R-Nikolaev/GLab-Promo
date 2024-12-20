@@ -1,0 +1,131 @@
+@import "../config/functions";
+@import "../config/mixins";
+
+.header {
+	z-index: 50;
+	inline-size: 100%;
+	transition: background-color var(--bs-transition);
+
+	background-size: cover !important;
+	background-position: center !important;
+	@include media-mx(575) {
+		background: none !important;
+		background-color: var(--grayscale-01) !important;
+	}
+
+	// .header__container
+	&__container {
+		block-size: rem($header-height);
+		@include media-mx(991) {
+			block-size: calc((rem($header-height)) / 2);
+		}
+	}
+
+	.logo {
+		display: block;
+
+		max-width: 286px;
+
+		margin-right: 168px;
+
+		@include media-mx(1399) {
+			max-width: 128px;
+
+			margin-right: 0;
+		}
+	}
+	p {
+		display: block;
+
+		font-weight: 700;
+		font-size: 20px;
+		color: var(--white);
+
+		@include media-mn(1900) {
+			font-size: 24px;
+		}
+		@include media-mx(1399) {
+			margin-right: 0;
+		}
+		span {
+			border-radius: 8px;
+			padding: 2px 4px;
+
+			background-color: var(--primary-10);
+			color: var(--white);
+		}
+	}
+	.timer {
+		font-weight: 700;
+		font-size: 24px;
+
+		margin-left: auto;
+
+		color: var(--white);
+		span {
+			font-weight: 500;
+			font-size: 12px;
+
+			b {
+				width: 50px;
+
+				font-weight: 700;
+				font-size: 20px;
+				text-align: center;
+
+				border-radius: 8px;
+				padding: 5px 4px;
+
+				background-color: var(--primary-10);
+				@include media-mn(1900) {
+					font-size: 24px;
+				}
+			}
+		}
+		p {
+			margin: 0;
+		}
+	}
+	.btn {
+		width: fit-content;
+
+		font-weight: 500;
+		font-size: 18px;
+
+		border-radius: 40px;
+		padding: 4px 4px 4px 24px;
+
+		color: var(--grayscale-01);
+		background-color: #ff0;
+
+		transition: all var(--bs-transition);
+
+		@include media-mx(1399) {
+			font-size: 12px;
+
+			margin-left: auto;
+			padding: 8px;
+		}
+		svg {
+			width: 40px;
+			height: 40px;
+
+			transition: all var(--bs-transition);
+			@include media-mx(1399) {
+				display: none;
+			}
+		}
+		&:hover {
+			background-color: var(--primary-10);
+			color: var(--white);
+		}
+		&:hover svg {
+			circle {
+				fill: var(--white);
+			}
+			path {
+				stroke: var(--grayscale-01);
+			}
+		}
+	}
+}
